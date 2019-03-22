@@ -19,6 +19,9 @@ Niveau: Employee level which differs according to their job
 Spécialité : domain of activity (library, music, IT, ...)
 ```
 
+
+
+
 - [bilan-social-effectifs-non-titulaires-permanents_1.csv](https://github.com/trustpair/jobs/tree/master/ruby/bilan-social-effectifs-non-titulaires-permanents_1.csv)
 - [bilan-social-effectifs-non-titulaires-permanents_2.csv](https://github.com/trustpair/jobs/tree/master/ruby/bilan-social-effectifs-non-titulaires-permanents_2.csv)
 - [bilan-social-effectifs-non-titulaires-permanents_3.csv](https://github.com/trustpair/jobs/tree/master/ruby/bilan-social-effectifs-non-titulaires-permanents_3.csv)
@@ -34,6 +37,17 @@ URL: https://opendata.paris.fr/api/records/1.0/search/?dataset=bilan-social-effe
 ```
 
 Usage example: https://opendata.paris.fr/api/records/1.0/search/?dataset=bilan-social-effectifs-non-titulaires-permanents&facet=annee&facet=collectivite&facet=type_de_contrat&facet=emplois&facet=niveau&refine.emplois=TECHNICIENS%20SUPERIEURS%20D%27ADMINISTRATIONS%20PARISIENNES
+
+from api :
+nombre_d_hommes	15
+emplois	"EBOUEURS"
+niveau	"EBOUEUR"
+type_de_contrat	"TEMPS COMPLET"
+collectivite	"COMMUNE"
+annee	"2013"
+nombre_de_femmes	0
+
+gem httparty
 
 ## Requirements
 
