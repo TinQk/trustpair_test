@@ -6,7 +6,7 @@ class PositionsController < ApplicationController
   # GET /positions
   # GET /positions.json
   def index
-    @positions = Position.all
+    @positions = Position.all.order(:emplois, annee: :desc)
   end
 
   # GET /positions/1
