@@ -5,6 +5,7 @@ class CreatePositions < ActiveRecord::Migration[5.2]
     create_table :positions do |t|
       t.string :emplois, null: false
       t.string :niveau, null: false
+      t.string :specialite
       t.string :type_de_contrat, null: false
       t.string :collectivite, null: false
       t.string :annee, null: false
