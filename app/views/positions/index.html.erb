@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Emplois</th>
+      <th>Niveau</th>
+      <th>Type de contrat</th>
+      <th>Collectivite</th>
+      <th>Annee</th>
+      <th>Nombre d hommes</th>
+      <th>Nombre de femmes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positions.each do |position| %>
+      <tr>
+        <td><%= position.emplois %></td>
+        <td><%= position.niveau %></td>
+        <td><%= position.type_de_contrat %></td>
+        <td><%= position.collectivite %></td>
+        <td><%= position.annee %></td>
+        <td><%= position.nombre_d_hommes %></td>
+        <td><%= position.nombre_de_femmes %></td>
+        <td><%= link_to 'Show', position %></td>
+        <td><%= link_to 'Edit', edit_position_path(position) %></td>
+        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Position', new_position_path %>

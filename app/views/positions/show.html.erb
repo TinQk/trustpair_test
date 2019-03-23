@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Emplois:</strong>
+  <%= @position.emplois %>
+</p>
+
+<p>
+  <strong>Niveau:</strong>
+  <%= @position.niveau %>
+</p>
+
+<p>
+  <strong>Type de contrat:</strong>
+  <%= @position.type_de_contrat %>
+</p>
+
+<p>
+  <strong>Collectivite:</strong>
+  <%= @position.collectivite %>
+</p>
+
+<p>
+  <strong>Annee:</strong>
+  <%= @position.annee %>
+</p>
+
+<p>
+  <strong>Nombre d hommes:</strong>
+  <%= @position.nombre_d_hommes %>
+</p>
+
+<p>
+  <strong>Nombre de femmes:</strong>
+  <%= @position.nombre_de_femmes %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>

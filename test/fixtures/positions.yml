@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  emplois: MyString
+  niveau: MyString
+  type_de_contrat: MyString
+  collectivite: MyString
+  annee: MyString
+  nombre_d_hommes: 1
+  nombre_de_femmes: 1
+
+two:
+  emplois: MyString
+  niveau: MyString
+  type_de_contrat: MyString
+  collectivite: MyString
+  annee: MyString
+  nombre_d_hommes: 1
+  nombre_de_femmes: 1
