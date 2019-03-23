@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Position < ApplicationRecord
   validates :emplois, presence: true
   validates :niveau, presence: true
