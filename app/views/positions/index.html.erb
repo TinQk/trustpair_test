@@ -2,11 +2,27 @@
 
 <h1>Positions</h1>
 
+<div>
+  <h3>Currently in db : <%= Position.count %> row(s)</h3>
+  <h3>Import a CSV File</h3>
+  <%= form_tag import_positions_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+  <h3>Vider la db</h3>
+  <%= form_tag destroy_all_positions_path, multipart: true do %>
+    <%= submit_tag "Destroy all" %>
+  <% end %>
+</div>
+
+<br>
+
 <table>
   <thead>
     <tr>
       <th>Emplois</th>
       <th>Niveau</th>
+      <th>Specialite</th>
       <th>Type de contrat</th>
       <th>Collectivite</th>
       <th>Annee</th>
@@ -21,6 +37,7 @@
       <tr>
         <td><%= position.emplois %></td>
         <td><%= position.niveau %></td>
+        <td><%= position.specialite %></td>
         <td><%= position.type_de_contrat %></td>
         <td><%= position.collectivite %></td>
         <td><%= position.annee %></td>

@@ -9,6 +9,16 @@ class PositionsController < ApplicationController
     @positions = Position.all.order(:emplois, annee: :desc)
   end
 
+  def import
+    Position.import_csv(params[:file])
+    redirect_to root_url, notice: "Data imported"
+  end
+
+  def destroy_all
+    Position.destroy_all
+    redirect_to root_url, notice: "kaboom !"
+  end
+
   # GET /positions/1
   # GET /positions/1.json
   def show; end

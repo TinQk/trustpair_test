@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :positions
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "positions#index"
+
+  resources :positions do
+    collection { post :import }
+    collection { post :destroy_all }
+  end
 end

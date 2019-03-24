@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_23_235713) do
     t.integer "nombre_de_femmes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["emplois", "niveau", "type_de_contrat", "collectivite"], name: "index", unique: true
+    t.index ["emplois", "niveau", "specialite", "type_de_contrat", "collectivite", "annee"], name: "index", unique: true
   end
 
 end
