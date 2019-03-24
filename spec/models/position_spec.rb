@@ -13,6 +13,7 @@ RSpec.describe Position, type: :model do
     it { expect(position.id).not_to be_nil }
     it { expect(position.emplois).not_to be_nil }
     it { expect(position.niveau).not_to be_nil }
+    it { expect(position.specialite).not_to be_nil }
     it { expect(position.type_de_contrat).not_to be_nil }
     it { expect(position.collectivite).not_to be_nil }
     it { expect(position.annee).not_to be_nil }

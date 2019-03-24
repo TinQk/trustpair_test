@@ -6,7 +6,7 @@ class Position < ApplicationRecord
   validates :type_de_contrat, presence: true
   validates :collectivite, presence: true
   validates :annee, presence: true
-  validates_uniqueness_of :index
+  validates_uniqueness_of :annee, scope: [:emplois, :niveau, :specialite, :type_de_contrat, :collectivite]
 
   def self.import_csv(csv)
     positions = []
@@ -16,6 +16,7 @@ class Position < ApplicationRecord
       positions << Position.new(h)
     end
     # gem 'activerecord-import'
-    Position.import(positions, on_duplicate_key_ignore: true)
+    Position.import(positions, validate_uniqueness: true)
+    #Position.import(positions, on_duplicate_key_ignore: true)
   end
 end
