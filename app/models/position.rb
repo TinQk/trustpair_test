@@ -15,6 +15,6 @@ class Position < ApplicationRecord
       positions << Position.new(h)
     end
     # gem 'activerecord-import'
-    Position.import(positions)
+    Position.import(positions, on_duplicate_key_ignore: true)
   end
 end
