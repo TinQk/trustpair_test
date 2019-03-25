@@ -10,8 +10,12 @@ class PositionsController < ApplicationController
   end
 
   def import
-    Position.import_csv(params[:file])
-    redirect_to root_url, notice: "Data imported"
+    begin
+      Position.import_csv(params[:file])
+      redirect_to root_url, notice: "Data imported"
+    rescue
+      redirect_to root_url, notice: "Invalid CSV file format"
+    end
   end
 
   def destroy_all
